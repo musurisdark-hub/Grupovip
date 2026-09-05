@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#120516">
+
+<title>ClubLove VIP 💎</title>
+
+<style>
+
+/* =====================================================
+   CORES DO SITE
+===================================================== */
+
+:root {
+    --preto: #050207;
+    --roxo: #17051f;
+    --roxo2: #280638;
+
+    --rosa: #ff0b83;
+    --rosa-claro: #ff70b9;
+
+    --dourado: #ffd700;
+    --dourado-claro: #fff2a6;
+    --dourado-escuro: #b8860b;
+
+    --branco: #ffffff;
+    --cinza: #d8ccd9;
+}
+
+
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--branco);
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            #500878 0%,
+            #20052a 35%,
+            #050207 85%
+        );
+
+    min-height: 100vh;
+}
+
+.container {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+section {
+
+    padding: 65px 0;
+
+}
+
+
+/* =====================================================
+   BANNER
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    border-bottom:
+        2px solid var(--dourado);
+
+    box-shadow:
+        0 10px 50px
+        rgba(255, 215, 0, .18);
+}
+
+
+/* FOTO DA CAPA */
+
+.hero-banner {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    z-index: 0;
+}
+
+
+/* ESCURECIMENTO DA FOTO */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.20),
+            rgba(5,2,7,.96)
+        );
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CONTEÚDO DO BANNER
+===================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding:
+        100px
+        20px
+        45px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        9px
+        20px;
+
+    border:
+        1px solid var(--dourado);
+
+    border-radius: 50px;
+
+    color:
+        var(--dourado-claro);
+
+    background:
+        rgba(0,0,0,.48);
+
+    box-shadow:
+        0 0 18px
+        rgba(255,215,0,.35);
+
+    font-weight: bold;
+}
+
+
+h1 {
+
+    margin:
+        15px
+        0
+        8px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            45px,
+            9vw,
+            90px
+        );
+
+    color:
+        var(--dourado);
+
+    text-shadow:
+
+        0 0 5px #ffffff,
+
+        0 0 15px
+        var(--dourado),
+
+        0 0 35px
+        rgba(255,215,0,.75);
+}
+
+
+.hero p {
+
+    max-width: 750px;
+
+    margin:
+        0
+        auto
+        25px;
+
+    font-size: 20px;
+
+    color:
+        var(--dourado-claro);
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        14px
+        25px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        .3s;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.02);
+
+}
+
+
+/* BOTÃO DOURADO */
+
+.btn-primary {
+
+    color:
+        #1b0d00;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff4a8,
+            #ffd700,
+            #b8860b
+        );
+
+    box-shadow:
+
+        0 0 18px
+        rgba(255,215,0,.45);
+}
+
+
+/* TELEGRAM */
+
+.btn-telegram {
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #7020d8,
+            #ff0b83
+        );
+
+    box-shadow:
+
+        0 0 22px
+        rgba(255,11,131,.40);
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+h2 {
+
+    margin:
+        0
+        0
+        14px;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
+
+    color:
+        var(--dourado);
+
+    text-shadow:
+
+        0 0 12px
+        rgba(255,215,0,.45);
+}
+
+
+.lead {
+
+    max-width: 750px;
+
+    margin:
+        0
+        auto
+        35px;
+
+    text-align: center;
+
+    color:
+        var(--dourado-claro);
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+
+    padding: 28px;
+
+    border-radius: 22px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(35,8,45,.94),
+            rgba(8,3,12,.94)
+        );
+
+    border:
+        1px solid
+        rgba(255,215,0,.30);
+
+    box-shadow:
+
+        0 15px 45px
+        rgba(0,0,0,.42);
+
+    transition:
+        .3s;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--dourado);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255,215,0,.20),
+
+        0 20px 50px
+        rgba(0,0,0,.5);
+}
+
+
+.card h3 {
+
+    color:
+        var(--dourado);
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+
+.card p {
+
+    color:
+        var(--cinza);
+
+    line-height: 1.7;
+}
+
+
+.icon {
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   PREÇO
+===================================================== */
+
+.price {
+
+    color:
+        var(--dourado);
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    text-shadow:
+
+        0 0 12px
+        rgba(255,215,0,.55);
+}
+
+
+/* =====================================================
+   PIX
+===================================================== */
+
+.pix {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    padding: 18px;
+
+    background:
+        rgba(0,0,0,.40);
+
+    border:
+        1px dashed
+        var(--dourado);
+
+    border-radius: 15px;
+}
+
+
+.pix code {
+
+    flex: 1;
+
+    color:
+        var(--dourado-claro);
+
+    font-size: 18px;
+
+    word-break:
+        break-all;
+}
+
+
+.notice {
+
+    color:
+        var(--dourado);
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+.form-wrap {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+}
+
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.full {
+
+    grid-column:
+        1 / -1;
+}
+
+
+label {
+
+    color:
+        var(--dourado);
+
+    font-weight: bold;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255,215,0,.25);
+
+    background:
+        #100714;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color:
+        var(--dourado);
+
+    box-shadow:
+
+        0 0 10px
+        rgba(255,215,0,.25);
+}
+
+
+select option {
+
+    background:
+        #16091d;
+
+    color:
+        white;
+}
+
+
+/* =====================================================
+   TERMOS DE USO
+===================================================== */
+
+.terms {
+
+    max-height: 240px;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    background:
+        #0c0610;
+
+    border:
+        1px solid
+        rgba(255,215,0,.22);
+
+    border-radius: 14px;
+
+    color:
+        var(--cinza);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.terms strong {
+
+    color:
+        var(--dourado);
+}
+
+
+.checkbox {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items:
+        flex-start;
+}
+
+
+.checkbox input {
+
+    width: auto;
+
+    margin-top: 5px;
+}
+
+
+.checkbox label {
+
+    color:
+        var(--cinza);
+
+    font-weight: normal;
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+footer {
+
+    padding:
+        40px
+        0;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid
+        rgba(255,215,0,.25);
+
+    background:
+        #050207;
+
+    color:
+        var(--dourado);
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 760px) {
+
+    .hero {
+
+        min-height:
+            580px;
+    }
+
+    .grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    form {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .hero-content {
+
+        padding:
+            80px
+            20px
+            35px;
+    }
+
+    h1 {
+
+        font-size:
+            52px;
+    }
+
+    .hero p {
+
+        font-size:
+            16px;
+    }
+
+    .pix {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+}
+
+
+/* =====================================================
+   NOVA TABELA PIX
+===================================================== */
+
+.pix-table-card{
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(35,8,45,.96), rgba(8,3,12,.96));
+}
+
+.pix-table-title{
+    padding: 18px 20px;
+    text-align: center;
+    color: var(--dourado-claro);
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #500878, #17051f);
+    border-bottom: 1px solid rgba(255,215,0,.30);
+}
+
+.pix-row{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,215,0,.16);
+}
+
+.pix-row:last-child{
+    border-bottom: none;
+}
+
+.pix-row-icon{
+    width: 56px;
+    height: 56px;
+    flex: 0 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+    background: linear-gradient(135deg, #7020d8, #ff0b83);
+    box-shadow: 0 0 18px rgba(255,11,131,.22);
+}
+
+.pix-row-content{
+    min-width: 0;
+    flex: 1;
+}
+
+.pix-label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dourado);
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.pix-value{
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: 800;
+    word-break: break-word;
+}
+
+.pix-copy-area{
+    padding: 22px;
+    text-align: center;
+    background: rgba(0,0,0,.18);
+}
+
+.pix-copy-area .btn{
+    width: 100%;
+    max-width: 420px;
+}
+
+#copyMsg{
+    min-height: 24px;
+    margin: 14px 0 0;
+    text-align: center;
+    color: var(--dourado-claro);
+    font-weight: bold;
+}
+
+@media (max-width: 760px){
+    .pix-row{
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .pix-row-icon{
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        font-size: 23px;
+    }
+
+    .pix-value{
+        font-size: 18px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
+
+<header class="hero">
+
+
+    <!--
+    COLOQUE A FOTO COM ESTE NOME:
+
+    CAPA_CLUBLOVE.jpg
+
+    NA MESMA PASTA DO INDEX.HTML
+    -->
+
+    <img
+        class="hero-banner"
+        src="CAPA_CLUBLOVE.jpg"
+        alt="ClubLove VIP"
+    >
+
+
+    <div class="hero-content container">
+
+        <span class="badge">
+
+            💎✨ CLUBLOVE VIP ✨💎
+
+        </span>
+
+
+        <h1>
+
+            ClubLove VIP
+
+        </h1>
+
+
+        <p>
+
+            🔥 O grupo que você estava procurando está aqui!
+
+            Conheça gente nova, faça amizades,
+            converse e se divirta.
+
+        </p>
+
+
+        <!-- LINK DO TELEGRAM -->
+
+        <a
+            class="btn btn-telegram"
+            href="https://t.me/CanalClubVip"
+            target="_blank"
+            rel="noopener"
+        >
+
+            📲 Entrar no Telegram
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     APRESENTAÇÃO
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<h2>
+
+    💎 Bem-vindo ao ClubLove VIP
+
+</h2>
+
+
+<p class="lead">
+
+    O grupo que você estava procurando está aqui!
+    Conheça pessoas novas, faça amizades,
+    converse e se divirta.
+
+</p>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+    <div class="icon">
+        👩‍🦰
+    </div>
+
+    <h3>
+        Mulheres
+    </h3>
+
+    <p>
+
+        Entrada
+
+        <strong style="color:#ffd700;">
+            100% GRATUITA
+        </strong>
+
+        💖
+
+    </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        👨
+    </div>
+
+    <h3>
+        Homens
+    </h3>
+
+    <p>
+
+        <span class="price">
+            R$ 20
+        </span>
+
+        <br>
+
+        Pagamento único
+        com acesso vitalício.
+
+    </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        🔐
+    </div>
+
+    <h3>
+        Segurança
+    </h3>
+
+    <p>
+
+        Grupo com verificação,
+        respeito e interação
+        entre participantes.
+
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BENEFÍCIOS
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<h2>
+
+    ✨ O que você encontra
+
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+    <div class="icon">
+        👥
+    </div>
+
+    <h3>
+        Pessoas reais
+    </h3>
+
+    <p>
+
+        Pessoas reais e
+        interação de verdade.
+
+    </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        💬
+    </div>
+
+    <h3>
+        Conversas & amizades
+    </h3>
+
+    <p>
+
+        Conversas, amizades
+        e muita diversão.
+
+    </p>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="icon">
+        🎉
+    </div>
+
+    <h3>
+        Ambiente animado
+    </h3>
+
+    <p>
+
+        Grupo movimentado
+        todos os dias.
+
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PIX
+===================================================== -->
+
+<section id="pix">
+
+<div class="container">
+
+<h2>
+    💳 Pagamento via PIX
+</h2>
+
+<p class="lead">
+    Para acesso masculino, o valor é de R$ 20.
+    Faça o pagamento usando os dados abaixo.
+</p>
+
+<div class="card pix-table-card">
+
+    <div class="pix-table-title">
+        💎 DADOS DA CONTA
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">🏦</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Banco</span>
+            <div class="pix-value">Itaú Unibanco (341)</div>
+        </div>
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">📍</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Agência</span>
+            <div class="pix-value">4863</div>
+        </div>
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">💳</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Conta</span>
+            <div class="pix-value">10529-4</div>
+        </div>
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">👤</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Titular da conta</span>
+            <div class="pix-value">Gabriel Musuris</div>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<div class="card pix-table-card">
+
+    <div class="pix-table-title">
+        🔑 CHAVE PIX
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">✉️</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Tipo de chave</span>
+            <div class="pix-value">E-mail</div>
+        </div>
+    </div>
+
+    <div class="pix-row">
+        <div class="pix-row-icon">🔐</div>
+        <div class="pix-row-content">
+            <span class="pix-label">Chave PIX</span>
+            <div class="pix-value" id="pixKey">Gabrielmusuris@outlook.com</div>
+        </div>
+    </div>
+
+    <div class="pix-copy-area">
+        <button
+            class="btn btn-primary"
+            type="button"
+            onclick="copiarPix()"
+        >
+            📋 Copiar e colar chave PIX
+        </button>
+
+        <p id="copyMsg" class="notice"></p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section>
+
+<div
+    class="container"
+    style="text-align:center;"
+>
+
+
+<h2>
+
+    💛 Segurança • Respeito • Amizade • Diversão 💛
+
+</h2>
+
+
+<p class="lead">
+
+    🔥 ClubLove VIP —
+    conectando pessoas todos os dias!
+
+</p>
+
+
+<a
+    href="#pix"
+    class="btn btn-primary"
+>
+
+    💳 Ir para pagamento PIX
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RODAPÉ
+===================================================== -->
+
+<footer>
+
+
+    ClubLove VIP 💎
+
+    <br><br>
+
+    <span style="color:#b8860b;">
+
+        Segurança • Respeito • Amizade • Diversão
+
+    </span>
+
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================================
+   COPIAR PIX
+===================================================== */
+
+function copiarPix() {
+
+    const chave =
+        document
+        .getElementById("pixKey")
+        .innerText
+        .trim();
+
+
+    navigator.clipboard
+        .writeText(chave)
+        .then(function() {
+
+            document
+            .getElementById("copyMsg")
+            .innerText =
+                "✅ Chave PIX copiada com sucesso!";
+
+        })
+        .catch(function() {
+
+            alert(
+                "Chave PIX: " + chave
+            );
+
+        });
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
